@@ -38,7 +38,7 @@ namespace voxel_grid_filter_ros2
         pcl::PointCloud<pcl::PointXYZ>::Ptr filtered(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PassThrough<pcl::PointXYZ> pass;
         pass.setInputCloud(voxel_grid_filtered);
-        pass.setFilterFieldName("z");
+        pass.setFilterFieldName("y");
         pass.setFilterLimits(pass_through_min, pass_through_max);
         pass.filter(*filtered);
 
